@@ -16,5 +16,312 @@ Author URI: http://wpod.in/#colaboradores
         "wordpress/wordpress", // WordPress   Styles Core
         //"woocommerce",       // WooCommerce Styles Core
         "odin/core",           // Odin        Styles Core
-        "layout"               // Theme       Custom Layout
+        "layout",              // Theme       Custom Layout
+        url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap')
 ;
+// ---Variaveis globais---
+$amarelo: #EEA91D;
+$preto: #181614;
+$cinza:  #929292;
+// -----------------------
+body{
+        font-family: 'Poppins', sans-serif;
+        width: 100%;
+        padding: 0;
+}
+h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
+        letter-spacing: 1.0px;  
+}
+.desabilitado{
+        display: none !important;
+}
+.alinhamento{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.botao-padrao{
+        font-size: 18px;
+        color: #fff;
+        background-color: #000;
+        padding: 5px 20px;
+        border-radius: 5px;
+        transition: all .3s ;
+        text-decoration: none !important;
+        &:hover{
+                transition: all .3s;
+                background-color: #fff;
+                color: $amarelo;   
+        }
+}
+// @media (min-width: 1500px){
+//         .container {
+//                 width: 1280px;
+//         }
+// }
+// ::-webkit-scrollbar {
+//         width: 8px;
+// }
+// ::-webkit-scrollbar-track {
+//         background: #80846A;
+//         border-radius: 10px;
+// }
+// ::-webkit-scrollbar-thumb {
+//         -webkit-border-radius: 10px; 
+//         background: $marrom; 
+// }
+// .alinhamento{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+// }
+header{
+        @extend .col-md-12;
+        min-height: 0px;
+        padding: 0;
+        position: fixed;
+        background-color: #FFFFFF;
+        z-index: 999;
+        top: 0;
+        //box-shadow: -16px 5px 34px -25px #000;
+        .container:before, .container:after {
+            content: " ";
+            display: none;
+        }
+        .navbar:before, .navbar:after {
+           content: " ";
+           display: none;
+        }
+        .main-navigation {
+                border: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: all .4s;
+                margin-bottom: 0px;
+                background-color: transparent;
+                @media screen and (max-width: 770px) and (min-width: 220px) {
+                        display: block;
+                }       
+                .logo-principal{
+                        padding: 8px 70px;
+                        background-color: #fff;
+                        img{
+                                max-width: 100%;
+                                transform: scale(1.00);
+                                width: 100%;
+                                @media only screen and (max-width: 990px){
+                                        width: 150px; 
+                                }
+                        }
+                }                     
+                .navbar-header{
+                        display: none;
+                        @media screen and (max-width: 770px) and (min-width: 220px) {
+                                display: block;
+                        }
+                        button{
+                                margin-top: -50px;
+                                background-color: $amarelo;
+                                border: 1px solid #01244e;
+                                outline: -webkit-focus-ring-color auto 0px;
+                                &:hover{
+                                        background-color: #000;
+                                }
+                        }
+                        .icon-bar{
+                                background-color: #fff;
+                        }
+                }
+                // .navbar-collapse{}
+                .navbar-nav {
+                        float: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        transition: all .4s;
+                        @media screen and (max-width: 770px) and (min-width: 220px) {
+                                display: block;
+                                background: transparent;
+                                margin: 0 -15px;
+                                height: inherit;
+                                transition: all .4s;
+                                padding: 15px 0px;
+                        }                        
+                        li {
+                                padding: 0 22px;
+                                float: none;
+                                display: inline-block;  
+                                @media screen and (max-width: 770px) and (min-width: 220px) {
+                                        width: 100%;
+                                        margin-top: 10px;
+                                        padding: 0 0px;
+                                }       
+                                a {
+                                        position:relative;
+                                        display: block;
+                                        padding: 0 0 5px 0px;
+                                        margin-left: 25px;
+                                        color: #fff;
+                                        font-weight: 500;
+                                        font-size: 20px;
+                                        background: transparent;
+                                        transition: all 0.3s;
+                                        &:before{
+                                                transition: all .3s;
+                                                content: ''; //obrigatorio
+                                                background: $preto;
+                                                height: 2px;
+                                                width: 0%;
+                                                position: absolute;
+                                                bottom: -5px;
+                                                left: 0px;
+                                        }
+                                        &:hover {  
+                                                transition: all 0.3s;
+                                                color: $preto;
+                                                &:before{
+                                                        width: 100%;
+                                                        transition: all .3s;
+                                                }
+                                        }
+                                        &:focus {
+                                            outline: 0px auto -webkit-focus-ring-color; 
+                                            outline-offset: 0px; 
+                                            background-color: transparent;
+                                        }                                              
+                                }
+                                &.active a { 
+                                        padding: 0 0 5px 0px;
+                                        background-color: transparent;
+                                        color: $preto;
+                                        position: relative;
+                                        border-bottom: 2px solid $preto;
+                                        @media screen and (max-width: 430px) and (min-width: 220px) {
+                                               border-bottom: 0px solid #FFFFFF;
+                                               padding: 0px;
+                                               color: $preto
+                                        }
+                                        &:hover { 
+                                                background-color: transparent;
+                                                color: $preto;
+                                        }
+                                        &:before{
+                                                transition: all .3s;
+                                                content: ''; //obrigatorio
+                                                background: $preto;
+                                                height: 2px;
+                                                width: 0%;
+                                                position: absolute;
+                                                bottom: -5px;
+                                                left: 0px;
+                                        } 
+                                        &:focus {
+                                                outline: 0px auto -webkit-focus-ring-color; 
+                                                outline-offset: 0px; 
+                                                color: $preto;
+                                                background-color: transparent;
+                                        }       
+                                }
+                                @media only screen and (max-width: 990px){
+                                        padding: 0 10px;
+                                        a{
+                                                font-size: 15px;
+                                        }
+                                }
+                        }
+                }  
+                .icones{
+                        margin-right: 60px;
+                        .rede-facebook{
+                                margin: 0 20px;
+                        }
+                        .botao-whats{
+                                font-size: 18px;
+                                color: #fff;
+                                background-color: #000;
+                                width: 240px;
+                                height: 38px;
+                                border-radius: 5px;
+                                transition: all .3s ;
+                                text-decoration: none !important;
+                                &:before{
+                                        content: 'Solicitar orçamento';
+                                }
+                                &:hover{
+                                        background-color: #1AA028;
+                                        &:before{
+                                                content: 'Whatsapp';
+                                        }
+                                }
+                        }
+                }
+        }
+        
+}
+footer{
+        @extend .col-md-12;
+        background-image: url(../images/back-footer.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0;
+        article{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 90px 0;
+                a{
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #fff;
+                        &:hover{
+                                color: #fff;
+                        }
+                }
+                .endereco{
+                        .loc{
+                                display: flex;
+                                justify-content: center;
+                        }
+                }
+                .telefones{
+                        align-items: flex-start;
+                        flex-direction: column;
+                        a{
+                                margin-bottom: 15px;
+                        }
+                }
+                .rede-socias{
+                        a{
+                                text-decoration: none;
+                                svg{
+                                        path{
+                                                transition: all .2s;
+                                                &:hover{
+                                                transition: all .2s;
+                                                        fill: $amarelo;
+                                                }
+                                        }
+                                }
+                        }
+                        .instagram{
+                                margin-left: 10px;
+                        }
+                }
+        }
+        .copyright{
+                @extend .col-md-12;
+                padding: 10px 0;
+                border-top: 1px solid #242424;           
+                p{
+                        font-size: 11px;
+                        color: #fff;
+                        margin: 0;
+                        float: left;
+                        text-transform: uppercase;
+                }
+                a{
+                        float: right;
+                }      
+        }
+}
