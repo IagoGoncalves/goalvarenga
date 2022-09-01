@@ -54,11 +54,11 @@ h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
                 color: $amarelo;   
         }
 }
-// @media (min-width: 1500px){
-//         .container {
-//                 width: 1280px;
-//         }
-// }
+@media (min-width: 1500px){
+        .container {
+                width: 1500px;
+        }
+}
 // ::-webkit-scrollbar {
 //         width: 8px;
 // }
@@ -70,11 +70,15 @@ h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
 //         -webkit-border-radius: 10px; 
 //         background: $marrom; 
 // }
-// .alinhamento{
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-// }
+main{
+        margin-top: 98px;
+        background-color: $amarelo;
+}
+.alinhamento{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
 header{
         @extend .col-md-12;
         min-height: 0px;
@@ -83,6 +87,7 @@ header{
         background-color: #FFFFFF;
         z-index: 999;
         top: 0;
+        background-color: $amarelo;
         //box-shadow: -16px 5px 34px -25px #000;
         .container:before, .container:after {
             content: " ";
@@ -324,4 +329,89 @@ footer{
                         float: right;
                 }      
         }
+}
+.home{
+        @extend .col-md-12;
+        padding: 0;
+        .banner{
+                @extend .col-md-12;
+                padding: 0;
+                margin-top: 60px;
+                position: relative;
+                .swiper-container {
+                        width: 100%;
+                        height: 100%;
+                        background: $amarelo;
+                        position: relative;
+                }
+                .swiper-slide {
+                        color: #fff;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        padding: 0px; 
+                        display: flex;
+                        height: auto;
+                        .foto-banner{
+                                @extend .col-md-7;
+                                padding: 0;
+                                height: 100%;
+                                // overflow: hidden;
+                                position:absolute;
+                                right: 0;
+                                img{
+                                        width: 100%;
+                                }
+                        }
+                        .descricoes{
+                                width: 42%;
+                                position: relative;
+                                padding: 100px;
+                                h2{
+                                        font-size: 48px;
+                                        color: #fff;
+                                        font-weight: 700;
+                                        padding: 0;
+                                } 
+                                h3{
+                                        font-size: 27px;  
+                                        font-weight: 400;
+                                        margin: 0 0 40px 0;
+                                        p{
+                                                color: #fff;
+                                        }   
+                                }                      
+                        }      
+                }
+                .navegacao-swiper{
+                        width: 42%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        background-color: #fff;
+                        padding: 50px;
+                        .botoes{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 15%;
+                                height: fit-content;
+                                margin-right: 60px;
+                                .swiper-button-next, .swiper-button-prev{
+                                        position: relative;
+                                        width: 0;
+                                        height: auto;
+                                }
+                                .swiper-button-prev{
+                                        &:hover{
+                                                transition: all .3s;
+                                        }
+                                }
+                                .swiper-button-next{
+                                        &:hover{
+                                                transition: all .3s;
+                                        }   
+                                }                     
+                        }       
+                }
+        } 
 }
