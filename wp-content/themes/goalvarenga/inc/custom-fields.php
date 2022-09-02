@@ -217,7 +217,90 @@ function custom_metabox() {
         ), 
       )
    );
-
+//Home
+  $post_metabox = new Odin_Metabox(
+    'empresa', // Slug/ID of the Metabox (Required)
+    'A empresa', // Metabox name (Required)
+    'page', // Slug of Post Type (Optional)
+    'normal', // Context (options: normal, advanced, or side) (Optional)
+    'high', // Priority (options: high, core, default or low) (Optional)
+    'page-home.php'
+  );
+  $post_metabox->set_fields(
+    array(
+      array(
+        'id'          => 'descritivo-empresa', // Obrigatório
+        'label'       => __( 'Descritivo da empresa', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+          'id'          => 'construcao', // Obrigatório
+          'label'       => __( 'Titulo Construção', 'odin' ), // Obrigatório
+          'type'        => 'text', // Obrigatório
+          'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+          'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+          'id'          => 'texto-construcao', // Obrigatório
+          'label'       => __( 'Texto Construção', 'odin' ), // Obrigatório
+          'type'        => 'textarea', // Obrigatório
+          'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+          'description' => __( '', 'odin' ), // Optional
+      ),  
+      array(
+          'id'   => 'separator1', // Obrigatório
+          'type' => 'separator' // Obrigatório
+      ), 
+      array(
+          'id'          => 'reparos', // Obrigatório
+          'label'       => __( 'Titulo Reparos', 'odin' ), // Obrigatório
+          'type'        => 'text', // Obrigatório
+          'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+          'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+          'id'          => 'texto-reparos', // Obrigatório
+          'label'       => __( 'Texto Reparos', 'odin' ), // Obrigatório
+          'type'        => 'textarea', // Obrigatório
+          'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+          'description' => __( '', 'odin' ), // Optional
+      ),   
+      array(
+        'id'   => 'separator1', // Obrigatório
+        'type' => 'separator' // Obrigatório
+      ), 
+      array(
+          'id'          => 'projetos', // Obrigatório
+          'label'       => __( 'Titulo Projetos', 'odin' ), // Obrigatório
+          'type'        => 'text', // Obrigatório
+          'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+          'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+          'id'          => 'texto-projetos', // Obrigatório
+          'label'       => __( 'Texto Projetos', 'odin' ), // Obrigatório
+          'type'        => 'textarea', // Obrigatório
+          'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+          'description' => __( '', 'odin' ), // Optional
+      ),      
+      array(
+        'id'          => 'imagem-fundo', // Required
+        'label'       => __( 'Imagem do fundo', 'odin' ), // Required
+        'type'        => 'image', // Required
+        // 'default'     => '', // Optional (image attachment id)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'imagem-frente', // Required
+        'label'       => __( 'Imagem da frente', 'odin' ), // Required
+        'type'        => 'image', // Required
+        // 'default'     => '', // Optional (image attachment id)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+    )
+  );
 }
 add_action( 'init', 'custom_metabox', 1 );
 

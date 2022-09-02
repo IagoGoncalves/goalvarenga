@@ -11,14 +11,11 @@
 get_header();
 ?>
 	<main id="home" class="home" tabindex="-1" role="main">
-		<!-- <?php for ($i=0; $i < 50; $i++) { 
-			echo '<h1>teste</h1>';
-		}?> -->
 		<section class="banner">
 			<div class="swiper-container banner-home">
 				<div class="swiper-wrapper">
 					<?php
-						$args = array('post_type' => 'banner','posts_per_page' => 1);
+						$args = array('post_type' => 'banner','posts_per_page' => -1);
 							$var = new WP_Query($args);
 							if($var->have_posts()):
 								while($var->have_posts()):
@@ -32,7 +29,7 @@ get_header();
 												</div>
 											</div>	
 											<div class="foto-banner" data-swiper-parallax="0">
-												<?php the_post_thumbnail('full'); ?>
+												<?php echo odin_thumbnail(1144, 905, get_the_title(), true, true);?>
 											</div>		
 										</div>	
 									<?php
@@ -42,6 +39,8 @@ get_header();
 					?>
 				</div>
 				<div class="navegacao-swiper">
+					<span class="branco"></span>
+					<div class="swiper-pagination"></div>
 					<div class="botoes">
 						<div class="swiper-button-prev">
 							<svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,6 +57,82 @@ get_header();
 					</div>
 				</div>
 			</div>			
+		</section>
+		<section class="empresa">
+			<div class="titulo">
+				<span>quem somos?</span>
+				<h2>A empresa</h2>
+			</div>
+			<section class="container">
+				<?php
+					$descritivoEmpresa =  get_post_meta( $post->ID,'descritivo-empresa', true );
+					$construcao =  get_post_meta( $post->ID,'construcao', true );
+					$textoConstrucao =  get_post_meta( $post->ID,'texto-construcao', true );
+					$reparos =  get_post_meta( $post->ID,'reparos', true );
+					$textoReparos =  get_post_meta( $post->ID,'texto-reparos', true );
+					$projetos =  get_post_meta( $post->ID,'projetos', true );
+					$textoProjetos =  get_post_meta( $post->ID,'texto-projetos', true );
+				?>
+				<article class="imagens">
+					<div class="img1">
+						<?php 
+							$galeria = get_post_meta( $post->ID,'imagem-fundo', true );					
+							$galeria = explode(",", $galeria);
+							foreach ( $galeria as $foto ) { ?>					
+								<img src="<?php echo odin_get_image_url( $foto, 600, 500, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+							<?php }
+						?>
+					</div>
+					<div class="img2">
+						<?php 
+							$galeria = get_post_meta( $post->ID,'imagem-frente', true );					
+							$galeria = explode(",", $galeria);
+							foreach ( $galeria as $foto ) { ?>					
+								<img class="abs" src="<?php echo odin_get_image_url( $foto, 600, 500, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+							<?php }
+						?>
+					</div>
+				</article>
+				<article class="textos">
+					<p><?php echo $descritivoEmpresa?></p>
+					<div class="icones-texto alinhamento">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icnempresa.svg"/>
+						<span>
+							<h3><?php echo $construcao?></h3>
+							<p><?php echo $textoConstrucao?></p>
+							<h3><?php echo $reparos?></h3>
+							<p><?php echo $textoReparos?></p>
+							<h3><?php echo $projetos?></h3>
+							<p><?php echo $textoProjetos?></p>
+						</span>
+					</div>
+					<a href="#" class="botao-padrao">Saiba mais</a>
+				</article>
+			</section>
+		</section>
+		<section class="servicos">
+			<div class="titulo">
+				<span>Nossos Serviços</span>
+				<h2>Serviços</h2>
+			</div>
+			<article class="card">
+				<?php
+					$args = array('post_type' => 'servico','posts_per_page' => 3);
+						$var = new WP_Query($args);
+						if($var->have_posts()):
+							while($var->have_posts()):
+								$var->the_post(); ?>
+									<div class="box">
+										<?php the_title()?>
+										<?php the_content()?>
+									</div>							
+									<?php echo odin_thumbnail(640, 400, get_the_title(), true,true);?>	
+								<?php
+							endwhile;
+						endif;
+					wp_reset_postdata(); 
+				?>
+			</article>
 		</section>
 	</main>
 <?php

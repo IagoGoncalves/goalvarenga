@@ -7,8 +7,10 @@ jQuery(document).ready(function($) {
         spaceBetween: 30,
         effect: 'fade',
         pagination: {
-        el: '.swiper-pagination',
+            el: '.swiper-pagination',
+            type: "fraction",
             clickable: true,
+            
         },
         navigation: {
             nextEl: '.swiper-button-next',
