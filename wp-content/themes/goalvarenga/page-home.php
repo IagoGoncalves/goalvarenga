@@ -123,8 +123,9 @@ get_header();
 							while($var->have_posts()):
 								$var->the_post(); ?>
 									<div class="box">
-										<?php the_title()?>
+										<h3><?php the_title()?></h3>
 										<?php the_content()?>
+										<a href="#" class="botao-secundario">Saiba mais</a>
 									</div>							
 									<?php echo odin_thumbnail(640, 400, get_the_title(), true,true);?>	
 								<?php

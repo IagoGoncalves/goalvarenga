@@ -54,6 +54,22 @@ h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
                 color: $amarelo;   
         }
 }
+.botao-secundario{
+        text-decoration: none !important;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: transparent;
+        border: 1px solid #fff;
+        transition: all .3s ;
+        padding: 7px 16px;
+        border-radius: 5px;
+        color: #fff;
+        &:hover{
+                transition: all .3s;
+                background-color: #fff;
+                color: $amarelo;   
+        }
+}
 @media (min-width: 1500px){
         .container {
                 width: 1500px;
@@ -526,5 +542,43 @@ footer{
                 @extend .col-md-12;
                 background-color: #fff;
                 padding: 80px 0 80px 0;
+                .card{
+                        margin-top: 60px;
+                        .box, img{
+                                @extend .col-md-4;
+                                padding: 0;
+                        }
+                        .box{
+                                padding: 80px;
+                                height: 396.5px;
+                                h3{
+                                        font-size: 33px;
+                                        font-weight: 700;
+                                        color: #fff;
+                                        margin-bottom: 40px;
+                                }
+                                p{
+                                        font-size: 16px;
+                                        font-weight: 200;
+                                        color: #fff;
+                                        margin-bottom: 35px;
+                                }
+                                &:nth-child(1){
+                                        background-image: url(../images/Caixa-01.png);
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
+                                }
+                                &:nth-child(3){
+                                        background-image: url(../images/Caixa-02.png);
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
+                                }
+                                &:nth-child(5){
+                                        background-image: url(../images/Caixa-03.png);
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
+                                }
+                        }
+                }
         }
 }
