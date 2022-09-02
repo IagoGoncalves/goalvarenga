@@ -53,6 +53,23 @@ function type_post_porsonalizados() {
             'show_in_rest' => true
          )
       );
+   //Projetos
+      $projeto = new Odin_Post_Type(
+         'Projetos',
+         'projeto'
+      );
+      $projeto->set_labels(
+         array( 'menu_name' => __( 'Projetos', 'odin' ))
+      );
+      $projeto->set_arguments(
+         array(
+            'public' => true,
+            'supports' => array('title','thumbnail','author','revisions' , 'editor'),
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-list-view',
+            'show_in_rest' => true
+         )
+      );
 }
 
 function change_post_label() {
