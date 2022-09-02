@@ -668,4 +668,53 @@ footer{
                         }                   
                 }
         }
+        .obra{
+                @extend .col-md-12;
+                padding: 150px 0;
+                background-image: url(../images/sua-obra.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                h2{
+                        text-align: center;
+                        font-size: 73px;
+                        font-weight: 700;
+                        color: #fff;
+                        margin-bottom: 30px;
+                }
+                .infos{
+                        .contato{
+                                margin-left: 70px;
+                                span{
+                                        margin-left: 20px;
+                                        p{
+                                                color: #fff;
+                                                font-size: 23px;
+                                                font-weight: 400;
+                                                
+                                        }
+                                        .icones{
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                .email{
+                                                       margin-right: 15px; 
+                                                }
+                                                a{
+                                                        svg{
+                                                                path{
+                                                                        transition: all .3s;
+                                                                }
+                                                                &:hover{
+                                                                        path{
+                                                                                transition: all .3s;
+                                                                                fill: #fff;
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
 }

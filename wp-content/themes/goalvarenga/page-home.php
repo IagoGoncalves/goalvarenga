@@ -178,9 +178,9 @@ get_header();
 		</section>
 		<section class="obra">
 			<h2>Sua obra em boas mãos!</h2>
-			<article class="infos container">
+			<article class="infos alinhamento">
 				<a href="#" class="botao-padrao">Faça um orçamento</a>
-				<div class="contato">
+				<div class="contato alinhamento">
 					<?php
 						$args = array('post_type' => 'dados','posts_per_page' => 1);
 							$var = new WP_Query($args);
