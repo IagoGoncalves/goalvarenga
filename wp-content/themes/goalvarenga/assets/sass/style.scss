@@ -75,20 +75,12 @@ h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
                 width: 1500px;
         }
 }
-// ::-webkit-scrollbar {
-//         width: 8px;
-// }
-// ::-webkit-scrollbar-track {
-//         background: #80846A;
-//         border-radius: 10px;
-// }
-// ::-webkit-scrollbar-thumb {
-//         -webkit-border-radius: 10px; 
-//         background: $marrom; 
-// }
 main{
         margin-top: 98px;
         background-color: $amarelo;
+        @media only screen and (max-width: 1475px){
+
+        }
 }
 .alinhamento{
         display: flex;
@@ -525,7 +517,7 @@ footer{
                                         span{
                                                 margin-left: 30px;
                                                 h3{
-                                                        font-size: 33px;
+                                                        font-size: 30px;
                                                         font-weight: 700;
                                                         color: $preto;
                                                         margin-bottom: 5px;
@@ -533,6 +525,12 @@ footer{
                                                 p{
                                                         margin-bottom: 0;
                                                 }
+                                        }
+                                }
+                                .botao-padrao{
+                                        &:hover{
+                                                background-color: $amarelo;
+                                                color: #fff;
                                         }
                                 }
                         }
