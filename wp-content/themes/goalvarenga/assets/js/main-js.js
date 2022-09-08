@@ -57,3 +57,19 @@ jQuery(document).ready(function($) {
             },
         });
 });
+
+function alternadorMissao(){
+    document.getElementById('missao').style.display = 'block';
+    document.getElementById('visao').style.display = 'none';
+    document.getElementById('valores').style.display = 'none';
+}
+function alternadorVisao(){
+    document.getElementById('missao').style.display = 'none';
+    document.getElementById('visao').style.display = 'block';
+    document.getElementById('valores').style.display = 'none';
+}
+function alternadorValores(){
+    document.getElementById('missao').style.display = 'none';
+    document.getElementById('visao').style.display = 'none';
+    document.getElementById('valores').style.display = 'block';
+}
