@@ -59,17 +59,38 @@ jQuery(document).ready(function($) {
 });
 
 function alternadorMissao(){
-    document.getElementById('missao').style.display = 'block';
+    document.getElementById('btnmissao').style.backgroundColor = "#EEA91D";
+    document.getElementById('btnmissao').style.color = "#fff";
+    document.getElementById('btnvisao').style.backgroundColor = "#f5f5f5";
+    document.getElementById('btnvisao').style.color = "#EEA91D";
+    document.getElementById('btnvalores').style.backgroundColor = "#f5f5f5";
+    document.getElementById('btnvalores').style.color = "#EEA91D";
+
+    document.getElementById('missao').style.display = 'flex';
     document.getElementById('visao').style.display = 'none';
     document.getElementById('valores').style.display = 'none';
 }
 function alternadorVisao(){
+    document.getElementById('btnmissao').style.backgroundColor = "#f5f5f5";
+    document.getElementById('btnmissao').style.color = "#EEA91D";
+    document.getElementById('btnvisao').style.backgroundColor = "#EEA91D";
+    document.getElementById('btnvisao').style.color = "#fff";
+    document.getElementById('btnvalores').style.backgroundColor = "#f5f5f5";
+    document.getElementById('btnvalores').style.color = "#EEA91D";
+
     document.getElementById('missao').style.display = 'none';
-    document.getElementById('visao').style.display = 'block';
+    document.getElementById('visao').style.display = 'flex';
     document.getElementById('valores').style.display = 'none';
 }
 function alternadorValores(){
+    document.getElementById('btnmissao').style.backgroundColor = "#f5f5f5";
+    document.getElementById('btnmissao').style.color = "#EEA91D";
+    document.getElementById('btnvisao').style.backgroundColor = "#f5f5f5";
+    document.getElementById('btnvisao').style.color = "#EEA91D";
+    document.getElementById('btnvalores').style.backgroundColor = "#EEA91D";
+    document.getElementById('btnvalores').style.color = "#fff";
+
     document.getElementById('missao').style.display = 'none';
     document.getElementById('visao').style.display = 'none';
-    document.getElementById('valores').style.display = 'block';
+    document.getElementById('valores').style.display = 'flex';
 }

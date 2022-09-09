@@ -219,7 +219,7 @@ function custom_metabox() {
    );
 //Home
   $post_metabox = new Odin_Metabox(
-    'empresa', // Slug/ID of the Metabox (Required)
+    'home', // Slug/ID of the Metabox (Required)
     'A empresa', // Metabox name (Required)
     'page', // Slug of Post Type (Optional)
     'normal', // Context (options: normal, advanced, or side) (Optional)
@@ -297,6 +297,75 @@ function custom_metabox() {
         'label'       => __( 'Imagem da frente', 'odin' ), // Required
         'type'        => 'image', // Required
         // 'default'     => '', // Optional (image attachment id)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+    )
+  );
+//Empresa
+  $post_metabox = new Odin_Metabox(
+    'empresa', // Slug/ID of the Metabox (Required)
+    'Informativo', // Metabox name (Required)
+    'page', // Slug of Post Type (Optional)
+    'normal', // Context (options: normal, advanced, or side) (Optional)
+    'high', // Priority (options: high, core, default or low) (Optional)
+    'page-empresa.php'
+  );
+  $post_metabox->set_fields(
+    array(
+      array(
+        'id'          => 'experiencia', // Obrigatório
+        'label'       => __( 'Anos de experiência', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => 'Anos de experiência', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'experiencia-qtd', // Obrigatório
+        'label'       => __( 'Quantidade de anos de experiência', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'projetos', // Obrigatório
+        'label'       => __( 'Projetos realizados', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => 'Projetos realizados', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'projetos-qtd', // Obrigatório
+        'label'       => __( 'Quantidade de Projetos realizados', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'licencas', // Obrigatório
+        'label'       => __( 'Licenças de Arquitetura', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => 'Licenças de Arquitetura', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'licencas-qtd', // Obrigatório
+        'label'       => __( 'Quantidade de licenças de arquitetura', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'clientes', // Obrigatório
+        'label'       => __( 'Clientes satisfeitos', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => 'Clientes satisfeitos', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'clientes-qtd', // Obrigatório
+        'label'       => __( 'Quantidade de clientes satisfeitos', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
         'description' => __( '', 'odin' ), // Optional
       ), 
     )
