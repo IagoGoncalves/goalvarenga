@@ -368,6 +368,90 @@ function custom_metabox() {
         'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
         'description' => __( '', 'odin' ), // Optional
       ), 
+      array(
+        'id'          => 'box1-img', // Required
+        'label'       => __( 'Imagem box 1', 'odin' ), // Required
+        'type'        => 'image', // Required
+        // 'default'     => '', // Optional (image attachment id)
+        'description' => __( '', 'odin' ), // Optional
+      ),
+      array(
+        'id'          => 'box1-title', // Obrigatório
+        'label'       => __( 'Titulo box 1', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'box1-desc', // Obrigatório
+        'label'       => __( 'Descritivo box 1', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'box2-img', // Required
+        'label'       => __( 'Imagem box 2', 'odin' ), // Required
+        'type'        => 'image', // Required
+        // 'default'     => '', // Optional (image attachment id)
+        'description' => __( '', 'odin' ), // Optional
+      ),
+      array(
+        'id'          => 'box2-title', // Obrigatório
+        'label'       => __( 'Titulo box 2', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'box2-desc', // Obrigatório
+        'label'       => __( 'Descritivo box 2', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'box3-img', // Required
+        'label'       => __( 'Imagem box 3', 'odin' ), // Required
+        'type'        => 'image', // Required
+        // 'default'     => '', // Optional (image attachment id)
+        'description' => __( '', 'odin' ), // Optional
+      ),
+      array(
+        'id'          => 'box3-title', // Obrigatório
+        'label'       => __( 'Titulo box 3', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'box3-desc', // Obrigatório
+        'label'       => __( 'Descritivo box 3', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'box4-img', // Required
+        'label'       => __( 'Imagem box 4', 'odin' ), // Required
+        'type'        => 'image', // Required
+        // 'default'     => '', // Optional (image attachment id)
+        'description' => __( '', 'odin' ), // Optional
+      ),
+      array(
+        'id'          => 'box4-title', // Obrigatório
+        'label'       => __( 'Titulo box 4', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'box4-desc', // Obrigatório
+        'label'       => __( 'Descritivo box 4', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
     )
   );
 }
