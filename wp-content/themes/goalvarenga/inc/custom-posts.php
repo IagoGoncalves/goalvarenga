@@ -38,7 +38,7 @@ function type_post_porsonalizados() {
       );
    //Serviços
       $servico = new Odin_Post_Type(
-         'Serviços',
+         'Serviço',
          'servico'
       );
       $servico->set_labels(
@@ -49,13 +49,14 @@ function type_post_porsonalizados() {
             'public' => true,
             'supports' => array('title','thumbnail','author','revisions' , 'editor'),
             'has_archive' => true,
+            'show_in_nav_menus'   => true,
             'menu_icon' => 'dashicons-admin-tools',
             'show_in_rest' => true
          )
       );
    //Projetos
       $projeto = new Odin_Post_Type(
-         'Projetos',
+         'Projeto',
          'projeto'
       );
       $projeto->set_labels(
@@ -66,6 +67,7 @@ function type_post_porsonalizados() {
             'public' => true,
             'supports' => array('title','thumbnail','author','revisions' , 'editor'),
             'has_archive' => true,
+            'show_in_nav_menus'   => true,
             'menu_icon' => 'dashicons-list-view',
             'show_in_rest' => true
          )

@@ -20,6 +20,21 @@ jQuery(document).ready(function($) {
                 delay: 5000,
             },    
         });
+    // Serviços
+        var swiper = new Swiper('.galeria-servico', {
+            speed: 2000,
+            parallax: true,
+            loop: true,
+            spaceBetween: 30,
+            effect: 'fade',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },    
+        });
     // Projetos
         var swiper = new Swiper('.projetos', {
             slidesPerView: 3,

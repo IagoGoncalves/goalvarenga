@@ -454,6 +454,25 @@ function custom_metabox() {
       ), 
     )
   );
+//Servicos
+  $post_metabox = new Odin_Metabox(
+    'servico-field', // Slug/ID of the Metabox (Required)
+    'Serviço', // Metabox name (Required)
+    'servico', // Slug of Post Type (Optional)
+    'normal', // Context (options: normal, advanced, or side) (Optional)
+    'high' // Priority (options: high, core, default or low) (Optional)
+  );
+  $post_metabox->set_fields(
+    array(
+      array(
+        'id'          => 'img-single-servico', // Required
+        'label'       => __( 'Imagens do banner ', 'odin' ), // Required
+        'type'        => 'image_plupload', // Required
+        // 'default'     => '', // Optional (image attachment ids separated with comma)
+        'description' => __( '', 'odin' ), // Optional
+      ),
+    )
+  );
 }
 add_action( 'init', 'custom_metabox', 1 );
 
