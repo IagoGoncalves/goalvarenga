@@ -250,6 +250,8 @@ function odin_enqueue_scripts() {
 	wp_localize_script( 'enviar-email', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 	wp_enqueue_script( 'main-js', $template_url . '/assets/js/main-js.js', array('jquery'), null, true );
+
+	wp_enqueue_script( 'mixitup', $template_url . '/assets/js/mixitup.min.js', array('jquery'), null, true );
 		
 	wp_enqueue_script( 'swiper', $template_url . '/assets/js/swiper.jquery.min.js', array('jquery'), null, true );
 

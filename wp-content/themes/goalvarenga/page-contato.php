@@ -10,9 +10,9 @@
 
 get_header();
 ?>
-	<main id="home" class="home" tabindex="-1" role="main">
+	<main id="contato" class="contato" tabindex="-1" role="main">
 		<?php for ($i=0; $i < 20; $i++) { 
-			echo '<h1>serviços</h1>';
+			echo '<h1>Contato</h1>';
 		}?>	
 	</main>
 <?php

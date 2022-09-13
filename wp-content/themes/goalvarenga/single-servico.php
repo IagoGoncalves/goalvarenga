@@ -42,6 +42,9 @@ get_header(); ?>
 					</div>	
 				</div>
 			</div>
+			<div class="voltar">
+				<a href="#" onclick='history.go(-1)' class="botao-quaternario">Voltar</a>
+			</div>
 		</div>
 	</main>
 <?php

@@ -72,6 +72,21 @@ function type_post_porsonalizados() {
             'show_in_rest' => true
          )
       );
+      $categoriaProjetos = new Odin_Taxonomy(
+         'Categoria Projeto',
+         'categoria-projetos',
+         'projeto'
+      );
+      $categoriaProjetos ->set_labels(
+         array(
+            'menu_name' => __( 'Categoria dos Projetos', 'odin' )
+         )
+      );
+      $categoriaProjetos ->set_arguments(
+         array(
+            'hierarchical' => true
+         )
+      );
 }
 
 function change_post_label() {
