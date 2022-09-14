@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
             },    
         });
     // Projetos
-        var swiper = new Swiper('.projetos', {
+        var swiper = new Swiper('.projetos-home', {
             slidesPerView: 3,
             spaceBetween: 30,		
             speed: 2000,

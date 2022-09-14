@@ -17,7 +17,7 @@
  */
 
 get_header(); ?>
-	<main id="projetos" class="projetos" tabindex="-1" role="main">
+	<main id="projeto" class="projeto" tabindex="-1" role="main">
 		<article class="container">
 			<h1>Projetos</h1>
 

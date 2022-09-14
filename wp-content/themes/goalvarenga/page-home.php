@@ -141,7 +141,7 @@ get_header();
 				<h2>Projetos</h2>
 			</div>
 			<article class="container">
-				<div class="swiper-container projetos">
+				<div class="swiper-container projetos-home">
 					<div class="swiper-wrapper">
 						<?php 
 							$args = array('post_type' => 'projeto','posts_per_page' => -1);
@@ -152,7 +152,7 @@ get_header();
 										<div class="swiper-slide">
 											<div class="box">
 												<?php echo odin_thumbnail(470, 322, get_the_title(), true, true);?>
-												<a class="botao-projetos" href="#">Lorem plus here</a>
+												<a class="botao-projetos" href="#"><?php the_title()?></a>
 											</div>
 										</div>
 									<?php

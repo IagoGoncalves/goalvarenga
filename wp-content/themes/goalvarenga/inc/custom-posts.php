@@ -54,7 +54,7 @@ function type_post_porsonalizados() {
             'show_in_rest' => true
          )
       );
-   //Projetos
+   //Serviços
       $projeto = new Odin_Post_Type(
          'Projeto',
          'projeto'
@@ -68,7 +68,7 @@ function type_post_porsonalizados() {
             'supports' => array('title','thumbnail','author','revisions' , 'editor'),
             'has_archive' => true,
             'show_in_nav_menus'   => true,
-            'menu_icon' => 'dashicons-list-view',
+            'menu_icon' => 'dashicons-admin-tools',
             'show_in_rest' => true
          )
       );
