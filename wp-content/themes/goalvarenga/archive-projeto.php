@@ -18,9 +18,18 @@
 
 get_header(); ?>
 	<main id="projeto" class="projeto" tabindex="-1" role="main">
-		<article class="container">
+		<section class="navegacao">
 			<h1>Projetos</h1>
-
+			<article class="breadcrumb">
+				<div class="container">
+					<ul>
+						<li><a href="<?php echo esc_url( home_url( 'home' ) ); ?>">Home </a></li>
+						<li class="atual"><h1>> Projetos</h1></li>
+					</ul>
+				</div>
+			</article>
+		</section>
+		<article class="container">
 			<ul class="filter-projetos controls">
 				<li data-filter="all" class="btn-filter ativo">Todos</li>
 				<?php
@@ -35,15 +44,9 @@ get_header(); ?>
 
 					<li class="item-list-projeto mix <?php echo $terms[0]->slug ?>">
 						<a class="link-projeto-detalhes" href="<?php the_permalink(); ?>">
-							<?php echo odin_thumbnail( 750, 450, get_the_title(), true, 'imagen-destaque-projeto' ); ?>
-							<!--<img class="imagen-destaque-projeto" src="<?php echo the_post_thumbnail_url(); ?>">-->
-
-							<div class="info-projeto">
-								<div class="descr-projeto">
-									<h2><?php the_title(); ?></h2>
-									<p class="data-projeto"><?php echo get_post_meta( $post->ID,'ano-projeto', true ); ?></p>
-								</div>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-sobre-projeto.png">
+							<div class="box-projetos">
+								<?php echo odin_thumbnail(470, 322, get_the_title(), true, true);?>
+								<a class="botao-projetos" href="<?php the_permalink(); ?>"><?php the_title()?></a>
 							</div>
 						</a>
 					</li>

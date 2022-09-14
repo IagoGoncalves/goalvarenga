@@ -37,7 +37,7 @@ get_header(); ?>
 					if($var->have_posts()):
 						while($var->have_posts()):
 							$var->the_post(); ?>
-								<div class="box">
+								<div class="box box-padrao">
 									<div class="chave">
 										<div class="imagem">
 											<?php echo odin_thumbnail(480, 360, true,true);?>

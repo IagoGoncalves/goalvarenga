@@ -342,8 +342,8 @@ require_once('class.phpmailer.php');
 require_once get_template_directory() . '/inc/ajax.php';
 
 //MetaBox
-// $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-// $template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 
 //logo do login do adiministrador do Wordpress
 function cutom_login_logo() {

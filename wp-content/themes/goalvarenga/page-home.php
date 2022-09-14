@@ -150,7 +150,7 @@ get_header();
 								while($var->have_posts()):
 									$var->the_post();?>                                   
 										<div class="swiper-slide">
-											<div class="box">
+											<div class="box-projetos">
 												<?php echo odin_thumbnail(470, 322, get_the_title(), true, true);?>
 												<a class="botao-projetos" href="#"><?php the_title()?></a>
 											</div>
