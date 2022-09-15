@@ -473,6 +473,48 @@ function custom_metabox() {
       ),
     )
   );
+//Projetos
+  $post_metabox = new Odin_Metabox(
+    'projeto-field', // Slug/ID of the Metabox (Required)
+    'projeto', // Metabox name (Required)
+    'projeto', // Slug of Post Type (Optional)
+    'normal', // Context (options: normal, advanced, or side) (Optional)
+    'high' // Priority (options: high, core, default or low) (Optional)
+  );
+  $post_metabox->set_fields(
+    array(
+      array(
+        'id'          => 'cliente', // Obrigatório
+        'label'       => __( 'Cliente', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ),
+      array(
+        'id'          => 'data', // Required
+        'label'       => __( 'Data conclusão', 'odin' ), // Required
+        'type'        => 'input', // Required
+        'description' => __( '', 'odin' ), // Optional
+        'attributes'  => array( // Optional (html input elements)
+            'type' => 'date'
+        )
+      ),
+      array(
+        'id'          => 'localizacao', // Obrigatório
+        'label'       => __( 'Localização', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ),
+      array(
+        'id'          => 'img-single-projeto', // Required
+        'label'       => __( 'Imagens do banner ', 'odin' ), // Required
+        'type'        => 'image_plupload', // Required
+        // 'default'     => '', // Optional (image attachment ids separated with comma)
+        'description' => __( '', 'odin' ), // Optional
+      ),
+    )
+  );
 }
 add_action( 'init', 'custom_metabox', 1 );
 

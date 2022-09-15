@@ -84,7 +84,9 @@ function type_post_porsonalizados() {
       );
       $categoriaProjetos ->set_arguments(
          array(
-            'hierarchical' => true
+            'hierarchical' => true,
+            'show_in_rest' => true,
+            'parent_item_colon' => true
          )
       );
 }
