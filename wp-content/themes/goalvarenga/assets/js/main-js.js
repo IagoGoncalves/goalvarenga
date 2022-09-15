@@ -71,6 +71,20 @@ jQuery(document).ready(function($) {
                 delay: 3000,
             },
         });
+    // Single Projetos
+        var swiper = new Swiper('.single-projeto', {
+            speed: 2000,
+            parallax: true,
+            loop: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 4000,
+            },    
+        });
 });
 
 function alternadorMissao(){

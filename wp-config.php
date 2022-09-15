@@ -1,4 +1,9 @@
 <?php
+// Begin AIOWPSEC Firewall
+if (file_exists('C:/wamp64/www/goalvarenga/aios-bootstrap.php')) {
+	include_once('C:/wamp64/www/goalvarenga/aios-bootstrap.php');
+}
+// End AIOWPSEC Firewall
 /**
  * As configurações básicas do WordPress
  *
