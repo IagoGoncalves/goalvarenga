@@ -194,7 +194,13 @@ function custom_metabox() {
       'attributes'  => array( // Optional (html input elements)
         'type' => 'url'
       )
-    ),    
+    ), 
+    array(
+      'id'          => 'horario-funcionamento', // Required
+      'label'       => __( 'Horário de funcionamento', 'odin' ), // Required
+      'type'        => 'input', // Required    
+      'default'     => 'Segunda há sexta – 7h às 17h ',
+    ),   
    )
  );
 
