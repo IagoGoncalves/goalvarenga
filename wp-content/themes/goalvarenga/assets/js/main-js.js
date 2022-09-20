@@ -72,14 +72,13 @@ jQuery(document).ready(function($) {
             },
         });
     // Single Projetos
-        var swiper = new Swiper('.single-projeto', {
+        var swiper = new Swiper('.single-projeto-swip', {
             speed: 2000,
-            parallax: true,
             loop: true,
             spaceBetween: 30,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next4',
+                prevEl: '.swiper-button-prev4',
             },
             autoplay: {
                 delay: 4000,
