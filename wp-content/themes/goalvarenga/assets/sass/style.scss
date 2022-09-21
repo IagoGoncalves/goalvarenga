@@ -590,6 +590,64 @@ footer{
                                 }                    
                         }    
                 }
+                @media only screen and (max-width: 1780px){
+                        .swiper-container{
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                .descricoes{
+                                                        padding: 50px;
+                                                        h2{
+                                                                font-size: 40px;
+                                                        }
+                                                }
+                                        }
+                                }
+                                .navegacao-swiper{
+                                        padding: 50px;
+                                        .botoes{
+                                                width: 25%;
+                                        }
+                                }
+                        }
+                }
+                @media only screen and (max-width: 1340px){
+                        .swiper-container{
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                .descricoes{
+                                                        padding: 25px;
+                                                        h2{
+                                                                font-size: 32px;
+                                                        }
+                                                        h3{
+                                                           font-size: 18px;     
+                                                        }
+                                                }
+                                        }
+                                }
+                                .navegacao-swiper{
+                                        padding: 30px 0 0 0;
+                                        .swiper-pagination{
+                                                font-size: 22px;
+                                                .swiper-pagination-current{
+                                                        font-size: 32px;
+                                                }
+                                                .swiper-pagination-total{
+                                                        font-size: 22px;
+                                                }
+                                        }
+                                        .botoes{
+                                                width: 20%;
+                                                div{
+                                                        svg{
+                                                                width: 40px;
+                                                                height: 40px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
         }
         .empresa{
                 @extend .col-md-12;
@@ -642,6 +700,18 @@ footer{
                                         }
                                 }
                         }
+                        @media only screen and (max-width: 1200px){
+                                display: flex;
+                                flex-direction: column-reverse;
+                                align-items: center;
+                                justify-content: center;
+                                .textos{
+                                        width: 80%;
+                                }
+                                .imagens{
+                                        display: none;
+                                }
+                        }
                 }
         } 
         .servicos{
@@ -685,6 +755,9 @@ footer{
                                         background-repeat: no-repeat;
                                 }
                         }
+                }
+                @media only screen and (max-width: 1200px){
+
                 }
         }
         .projetos{
@@ -843,11 +916,6 @@ footer{
                                                                         transition: all .3s;
                                                                         color: $amarelo;
                                                                 }
-                                                                // &:hover a{
-                                                                //         transition: all .3s;
-                                                                //         background-color: $amarelo;
-                                                                //         color: #fff;
-                                                                // }
                                                                 &:nth-child(1){
                                                                         a{            
                                                                                 background-color: $amarelo;
@@ -875,6 +943,25 @@ footer{
                                         }
                                         .visao, .valores{
                                                 display: none;
+                                        }
+                                        @media only screen and (max-width: 1200px){
+                                                .titulos{
+                                                        ul{
+                                                                width: 100%;
+                                                                display: flex;
+                                                                justify-content: space-between;
+                                                                align-items: center;
+                                                                li{
+                                                                        width: 33%;
+                                                                        a{
+                                                                                width: 100%;
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                                span{
+                                                        padding: 0 25px;
+                                                }
                                         }
                                 }
                         }
@@ -915,6 +1002,34 @@ footer{
                                 }
                                 .box3{
                                         padding-left: 110px;
+                                }
+                                @media only screen and (max-width: 1500px){
+                                        .box1{
+                                                padding-right: 50px;
+                                        }
+                                        .box2{
+                                                padding: 0 50px;
+                                        }
+                                        .box3{
+                                                padding-left: 50px;
+                                        }
+                                }
+                                @media only screen and (max-width: 1200px){
+                                        .alinhamento{
+                                                font-size: 14px;
+                                                b{
+                                                        font-size: 32px;
+                                                }
+                                        }
+                                        .box1{
+                                                padding-right: 15px;
+                                        }
+                                        .box2{
+                                                padding: 0 15px;
+                                        }
+                                        .box3{
+                                                padding-left: 15px;
+                                        }
                                 }
                         }
                 }
@@ -963,6 +1078,23 @@ footer{
                                                 margin: 0;
                                                 text-align: center;
                                                 font-weight: 300;
+                                        }
+                                }
+                        }
+                        @media only screen and (max-width: 1500px){
+                                .icones{
+                                        .alinhamento{
+                                                width: 255px;
+                                                height: 220px;
+                                                padding: 15px;
+                                        }
+                                }
+                        }
+                        @media only screen and (max-width: 1200px){
+                                .icones{
+                                        flex-flow: wrap;
+                                        .alinhamento{
+                                                margin-bottom: 20px
                                         }
                                 }
                         }
