@@ -131,8 +131,8 @@ h1, h2, h3, h4, h5, p, a, b, title, span, input, button{
 }
 main{
         margin-top: 97px;
-        @media only screen and (max-width: 1475px){
-
+        @media only screen and (max-width: 1100px){
+                margin-top: 50px;
         }
 }
 .alinhamento{
@@ -209,7 +209,7 @@ header{
                         }
                         button{
                                 margin-top: -50px;
-                                background-color: $amarelo;
+                                background-color: $cinza;
                                 border: 1px solid #01244e;
                                 outline: -webkit-focus-ring-color auto 0px;
                                 &:hover{
@@ -220,7 +220,6 @@ header{
                                 background-color: #fff;
                         }
                 }
-                // .navbar-collapse{}
                 .navbar-nav {
                         float: none;
                         display: flex;
@@ -356,8 +355,59 @@ header{
                                 }
                         }
                 }
+                @media only screen and (max-width: 1472px){
+                        .navbar-collapse{
+                                ul{
+                                        li{
+                                                a{
+                                                        margin-left: 0;
+                                                        font-size: 18px;
+                                                }
+                                        }
+                                }
+                        }
+                        .icones{
+                                margin-right: 15px;
+                        }
+                }
+                @media only screen and (max-width: 1200px){
+                        .navbar-collapse{
+                                ul{
+                                        li{
+                                                padding: 0px 15px;
+                                        }
+                                }
+                        }
+                        .icones{
+                                .rede-facebook, .rede-instagram{
+                                        display: none;
+                                }
+                        }
+                }
         }
-        
+        @media only screen and (max-width: 990px){
+                width: 100%;
+                .main-navigation{
+                        .logo-principal{
+                                display: flow-root;
+                                justify-content: flex-start;
+                                align-items: center;
+                                width: fit-content;
+                                padding: 10px 60px;
+                                img{
+                                        width: 100px;
+                                }
+                        }
+                        .navbar-collapse{
+                                border: 0;
+                        }
+                        .icones{
+                                a{
+                                        display: none;
+                                }
+                        }
+                }
+        }
 }
 footer{
         @extend .col-md-12;
@@ -406,6 +456,32 @@ footer{
                         }
                         .instagram{
                                 margin-left: 10px;
+                        }
+                }
+                @media only screen and (max-width: 990px){
+                        padding: 50px 0;
+                        flex-direction: column;
+                        .logo{
+                                display: none;
+                        }
+                        .alinhamento{
+                                svg{
+                                        margin-right: 5px;
+                                }
+                        }
+                        .endereco{
+                                .loc{
+                                        text-align: center;
+                                }
+                        }
+                        .telefones{
+                                align-items: center;
+                                a{
+                                        margin-bottom: 20px;
+                                }
+                                .telefone{
+                                        margin: 20px 0;
+                                }
                         }
                 }
         }
@@ -614,36 +690,69 @@ footer{
                         .swiper-container{
                                 .swiper-wrapper{
                                         .swiper-slide{
+                                                .foto-banner{
+                                                        position: relative
+                                                }
+                                        }
+                                }
+                                .navegacao-swiper{
+                                        background-color: $amarelo;
+                                        justify-content: flex-start;
+                                        width: 100%;
+                                        padding: 50px 50px 0 50px;
+                                        .botoes{
+                                                margin-left: 60px;
+                                                width: 10%;
+                                        }
+                                        .swiper-pagination{
+                                                color: #fff;
+                                        }
+                                }
+                        }
+                }
+                @media only screen and (max-width: 990px){
+                        .swiper-container{
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
                                                 .descricoes{
-                                                        padding: 25px;
+                                                        width: 100%;
                                                         h2{
-                                                                font-size: 32px;
+                                                                margin-top: 0;
+                                                                font-size: 38px;
                                                         }
                                                         h3{
-                                                           font-size: 18px;     
+                                                                font-size: 22px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+                @media only screen and (max-width: 770px){
+                        .swiper-container{
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                flex-direction: column-reverse;
+                                                .foto-banner{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        max-width: 70%;
+                                                        width: 100%;
+                                                }
+                                                .descricoes{
+                                                        h2, h3, div{
+                                                                text-align: center;
                                                         }
                                                 }
                                         }
                                 }
                                 .navegacao-swiper{
-                                        padding: 30px 0 0 0;
-                                        .swiper-pagination{
-                                                font-size: 22px;
-                                                .swiper-pagination-current{
-                                                        font-size: 32px;
-                                                }
-                                                .swiper-pagination-total{
-                                                        font-size: 22px;
-                                                }
-                                        }
+                                        justify-content: center;
                                         .botoes{
                                                 width: 20%;
-                                                div{
-                                                        svg{
-                                                                width: 40px;
-                                                                height: 40px;
-                                                        }
-                                                }
                                         }
                                 }
                         }
@@ -706,11 +815,15 @@ footer{
                                 align-items: center;
                                 justify-content: center;
                                 .textos{
-                                        width: 80%;
+                                        width: 100%;
                                 }
                                 .imagens{
                                         display: none;
                                 }
+                        }
+                        @media only screen and (max-width: 990px){
+                                margin-bottom: 0px;
+                                padding-bottom: 80px;
                         }
                 }
         } 
@@ -719,44 +832,108 @@ footer{
                 background-color: #fff;
                 padding: 80px 0 80px 0;
                 .card{
-                        margin-top: 60px;
-                        .box, img{
+                        @extend .col-md-12;
+                        margin-top: 70px;
+                        padding: 0;
+                        .box{
                                 @extend .col-md-4;
                                 padding: 0;
-                        }
-                        .box{
-                                padding: 80px;
-                                height: 396.5px;
-                                h3{
-                                        font-size: 33px;
-                                        font-weight: 700;
-                                        color: #fff;
-                                        margin-bottom: 40px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                &:nth-child(2){
+                                        flex-direction: column-reverse;
                                 }
-                                p{
-                                        font-size: 16px;
-                                        font-weight: 200;
-                                        color: #fff;
-                                        margin-bottom: 35px;
+                                .agrupador{
+                                        align-items: flex-start;
+                                        flex-direction: column;
+                                        height: 400px;
+                                        padding: 87px;
+                                        h3{
+                                                font-size: 33px;
+                                                font-weight: 700;
+                                                color: #fff;
+                                                margin-bottom: 40px;
+                                        }
+                                        p{
+                                                font-size: 16px;
+                                                font-weight: 200;
+                                                color: #fff;
+                                                margin-bottom: 35px;
+                                        }
                                 }
                                 &:nth-child(1){
-                                        background-image: url(../images/Caixa-01.png);
-                                        background-size: cover;
-                                        background-repeat: no-repeat;
+                                        .agrupador{
+                                                background-image: url(../images/Caixa-01.png);
+                                                background-size: cover;
+                                                background-repeat: no-repeat;
+                                        }
+                                }
+                                &:nth-child(2){
+                                        .agrupador{
+                                                background-image: url(../images/Caixa-02.png);
+                                                background-size: cover;
+                                                background-repeat: no-repeat;
+                                        }
                                 }
                                 &:nth-child(3){
-                                        background-image: url(../images/Caixa-02.png);
-                                        background-size: cover;
-                                        background-repeat: no-repeat;
+                                        .agrupador{
+                                                background-image: url(../images/Caixa-03.png);
+                                                background-size: cover;
+                                                background-repeat: no-repeat;
+                                        }
                                 }
-                                &:nth-child(5){
-                                        background-image: url(../images/Caixa-03.png);
-                                        background-size: cover;
-                                        background-repeat: no-repeat;
+                                @media only screen and (max-width: 1600px){
+                                        .agrupador{
+                                                height: 312px;
+                                                padding: 50px;
+                                        }
+                                }
+                                @media only screen and (max-width: 1200px){
+                                        .agrupador{
+                                                height: 252px;
+                                                padding: 50px;
+                                                h3{
+                                                        font-size: 28px;
+                                                        margin-bottom: 10px;
+                                                }
+                                                p{
+                                                        font-size: 14px;
+                                                        margin-bottom: 10px;
+                                                }
+                                        }
                                 }
                         }
                 }
-                @media only screen and (max-width: 1200px){
+                @media only screen and (max-width: 990px){
+                        .titulo{
+                                background-color: $amarelo;
+                                padding: 50px 0;
+                                span{
+                                        -webkit-text-stroke-color: #efefef59;
+                                }
+                                h2{
+                                        color: #fff;
+                                }
+                        }
+                        .card{
+                                margin-top: 0;
+                                .box{
+                                        .agrupador{
+                                                background-image: none !important;
+                                                background-color: $amarelo;
+                                                padding-left: 50px;
+                                                padding-right: 50px;
+                                                padding-bottom: 50px;
+                                                padding-top: 0;    
+                                                height: auto;
+                                        }
+                                        img{
+                                                display: none;
+                                        }  
+                                }
+                        }
 
                 }
         }
@@ -822,7 +999,32 @@ footer{
                         }
                         .prev{
                                 left: 10%;
-                        }                   
+                        }        
+                        @media only screen and (max-width: 1200px){
+                                .swiper-button{
+                                        width: 50px;
+                                        bottom: 40%;
+                                }
+                                .next{
+                                        right: 8%;
+                                }
+                                .prev{
+                                        left: 8%;
+                                }     
+                        }
+                        @media only screen and (max-width: 990px){
+                                .swiper-container{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .box-projetos{
+                                                                .botao-projetos{
+                                                                        font-size: 18px;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
                 }
         }
         .obra{
@@ -841,6 +1043,7 @@ footer{
                 .infos{
                         .contato{
                                 margin-left: 70px;
+                                width: auto;
                                 span{
                                         margin-left: 20px;
                                         p{
@@ -873,6 +1076,12 @@ footer{
                                 }
                         }
                 }
+                @media only screen and (max-width: 990px){
+                        padding: 50px 0;
+                        h2{
+                                font-size: 52px;
+                        }
+                }
         }
 }
 .empresa{
@@ -902,31 +1111,24 @@ footer{
                                 .colapsagem{
                                         .titulos{
                                                 width: 100%;
-                                                ul{
+                                                .alternado1{
                                                         padding: 0;
-                                                        li{
-                                                                list-style: none;
-                                                                a{
-                                                                        @extend .col-md-4;
-                                                                        padding: 12px 0;
-                                                                        text-align: center;
-                                                                        background-color: #f5f5f5;
-                                                                        font-size: 20px;
-                                                                        text-decoration: none;
-                                                                        transition: all .3s;
-                                                                        color: $amarelo;
-                                                                }
+                                                        a{
+                                                                @extend .col-md-4;
+                                                                padding: 12px 0;
+                                                                text-align: center;
+                                                                background-color: #f5f5f5;
+                                                                font-size: 20px;
+                                                                text-decoration: none;
+                                                                transition: all .3s;
+                                                                color: $amarelo;
                                                                 &:nth-child(1){
-                                                                        a{            
-                                                                                background-color: $amarelo;
-                                                                                color: #fff;
-                                                                        }
+                                                                        background-color: $amarelo;
+                                                                        color: #fff;
                                                                 } 
                                                                 &:nth-child(2){
-                                                                        a{            
-                                                                                border-left: 1px solid #fff;
-                                                                                border-right: 1px solid #fff;
-                                                                        }
+                                                                        border-left: 1px solid #fff;
+                                                                        border-right: 1px solid #fff;
                                                                 } 
                                                         }
                                                 }
@@ -947,15 +1149,11 @@ footer{
                                         @media only screen and (max-width: 1200px){
                                                 .titulos{
                                                         ul{
-                                                                width: 100%;
                                                                 display: flex;
                                                                 justify-content: space-between;
                                                                 align-items: center;
-                                                                li{
-                                                                        width: 33%;
-                                                                        a{
-                                                                                width: 100%;
-                                                                        }
+                                                                a{
+                                                                        width: 100%;
                                                                 }
                                                         }
                                                 }
@@ -970,6 +1168,11 @@ footer{
                                 padding: 0;
                                 img{
                                         box-shadow: 0px 5px 20px -10px #000000;
+                                }
+                        }
+                        @media only screen and (max-width: 990px){
+                                .imagem{
+                                        display: none;
                                 }
                         }
                 }
@@ -1029,6 +1232,19 @@ footer{
                                         }
                                         .box3{
                                                 padding-left: 15px;
+                                        }
+                                }
+                                @media only screen and (max-width: 770px){
+                                        flex-flow: wrap;
+                                        justify-content: center;
+                                        .alinhamento{
+                                                border-right: none !important;
+                                        }
+                                }
+                                @media only screen and (max-width: 600px){
+                                        flex-direction: column;
+                                        .alinhamento{
+                                                padding: 0;
                                         }
                                 }
                         }
@@ -1096,6 +1312,11 @@ footer{
                                         .alinhamento{
                                                 margin-bottom: 20px
                                         }
+                                }
+                        }
+                        @media only screen and (max-width: 600px){
+                                .icones{
+                                        justify-content: center;
                                 }
                         }
                 }
@@ -1238,6 +1459,57 @@ footer{
                                 font-weight: 700;
                         }
                 }
+                @media only screen and (max-width: 1500px){
+                        .swiper-wrapper{
+                                .swiper-slide{
+                                        .foto{
+                                                img{
+                                                        width: 100%;
+                                                        max-width: 100%;
+                                                }
+                                        }
+                                }
+                        }
+                        .navegacao-swiper{
+                                .botoes{
+                                        width: 15%;
+                                }
+                        }
+                }
+                @media only screen and (max-width: 990px){
+                        .swiper-wrapper{
+                                padding: 65px 0;
+                                .swiper-slide{
+                                        flex-flow: wrap;
+                                        justify-content: center;
+                                        .conteudo{
+                                        text-align: center;
+                                                padding-left: 15px;
+                                        }
+                                        .foto{
+                                                margin: 20px 0 0 0;
+                                                display: flex;
+                                                justify-content: center;
+                                                img{
+                                                        width: 100%;
+                                                        max-width: 65%;
+                                                }
+                                        }
+                                }
+                        }
+                        .navegacao-swiper{
+                                justify-content: flex-start;
+                                padding: 0;
+                                .botoes{
+                                        display: none;
+                                }
+                        }
+                        .voltar{
+                                text-align: center;
+                                margin-left: 0;
+                                padding: 50px 50px;
+                        }
+                }
         }        
 }
 .projeto{
@@ -1324,6 +1596,9 @@ footer{
                                         }
                                 }
                         }
+                        @media only screen and (max-width: 990px){
+                                justify-content: center;
+                        }
                 }
         }
 }
@@ -1331,51 +1606,81 @@ footer{
         @extend .col-md-12;
         padding: 0;
         .container{
-                .swiper-container{
-                        padding: 70px 0;
-                        .swiper-wrapper{
-                                .swiper-slide{
-                                        .foto{
-                                                display: flex;
-                                                justify-content: center;
-                                                width: auto;
-                                        }
-                                }
-                        }
-                }
-                .swiper-button{
-                        top: unset;
-                        bottom: 55%;
-                        transform: translateY(50%);
-                        width: 50px;
-                        height: 60px;
-                        transition: all .4s;
+                .agrupador{
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        position: absolute;
-                        z-index: 99;
-                        background: transparent;                        
-                }
-                .prev, .next{
-                        width: auto;                       
-                        height: auto;
-                        svg{
-                                rect{
-                                        transition: all .3s;
-                                        &:hover{
-                                                transition: all .3s;
-                                                fill: $amarelo;
+                        .swiper-container{
+                                padding: 70px 0;
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                .foto{
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        width: auto;
+                                                }
                                         }
                                 }
                         }
+                        .swiper-button{
+                                top: unset;
+                                bottom: 55%;
+                                transform: translate(0px, 20px);
+                                width: 50px;
+                                height: 60px;
+                                transition: all .4s;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                z-index: 99;
+                                background: transparent;                        
+                        }
+                        .prev, .next{
+                                width: auto;                       
+                                height: auto;
+                                svg{
+                                        rect{
+                                                transition: all .3s;
+                                                &:hover{
+                                                        transition: all .3s;
+                                                        fill: $amarelo;
+                                                }
+                                        }
+                                }
+                        }
+                        .prev{
+                                transform: translateX(350%);
+                        }
+                        .next{
+                                transform: translateX(-350%);
+                        }
+                        @media only screen and (max-width: 1500px){
+                                .prev{
+                                        transform: translateX(100%);
+                                }
+                                .next{
+                                        transform: translateX(-100%);
+                                }
+                        }
+                        @media only screen and (max-width: 1200px){
+                                .swiper-container{
+                                        .foto{
+                                                img{
+                                                        width: 100%; 
+                                                        max-width: 100%;
+                                                }
+                                        }
+                                }
+                                .prev{
+                                        transform: translateX(50%);
+                                }
+                                .next{
+                                        transform: translateX(-50%);
+                                }
+                        }
+                        
                 }
-                .next{
-                        right: 24%;
-                }
-                .prev{
-                        left: 24%;
-                }    
                 .descritivo{
                         .box{
                                 padding: 30px 0px;
@@ -1400,15 +1705,49 @@ footer{
                                         }
                                 }
                         }
+                        @media only screen and (max-width: 990px){
+                                .box{
+                                        .linha{
+                                                padding: 0 20px;
+                                        }
+                                }
+                        }  
                 }
-        }
-        .voltar{
-                padding: 80px 0;
-                text-align: center;
-                a{
-                        font-size: 23px;
-                        font-weight: 700;
+                .voltar{
+                        padding: 80px 0;
+                        text-align: center;
+                        a{
+                                font-size: 23px;
+                                font-weight: 700;
+                        }
                 }
+                @media only screen and (max-width: 770px){
+                        .agrupador{
+                                .swiper-container{
+                                        padding: 50px 0;
+                                }
+                                .swiper-button{
+                                        width: 45px;
+                                }
+                        }
+                        .descritivo{
+                                flex-direction: column;
+                                .box{
+                                        padding: 10px 0;
+                                        background-color: transparent;
+                                        .linha{
+                                                text-align: center;
+                                                border-right: 0;
+                                                h3{
+                                                        margin-top: 0;
+                                                }
+                                        }
+                                }
+                        }
+                        .voltar{
+                                padding: 50px 0;
+                        }
+                } 
         }
 }
 .contato{
@@ -1648,6 +1987,9 @@ footer{
                                                         background: $amarelo;                                                                   
                                                 }
                                         }
+                                }
+                                @media only screen and (max-width: 990px){
+                                        margin-bottom: 0;
                                 }
                         }
                 }
