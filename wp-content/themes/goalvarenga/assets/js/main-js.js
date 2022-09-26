@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
                     spaceBetween: 10,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 20,
                 },
                 640: {
