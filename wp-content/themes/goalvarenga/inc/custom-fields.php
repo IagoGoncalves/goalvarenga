@@ -221,6 +221,16 @@ function custom_metabox() {
           'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
           'description' => __( 'Descrition Example', 'odin' ), // Opcional
         ), 
+        array(
+          'id'          => 'url-banner', // Required
+          'label'       => __( 'Link', 'odin' ), // Required
+          'type'        => 'input', // Required
+          // 'default'  => 'Default text', // Optional
+          'description' => __( 'Ex: https://goalvarenga.com.br', 'odin' ), // Optional
+          'attributes'  => array( // Optional (html input elements)
+              'type' => 'url'
+          )
+        ),
       )
    );
 //Home

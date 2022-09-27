@@ -84,7 +84,7 @@
 							endif;
 						wp_reset_postdata(); 
 					?>
-					<a href="#" class="botao-whats alinhamento"></a>
+					<a href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site da GO Alvarenga" alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank" class="botao-whats alinhamento"></a>
 				</div>
 			</div>
 		</div>

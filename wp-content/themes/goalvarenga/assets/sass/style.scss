@@ -171,6 +171,11 @@ main{
                         font-size: 52px;
                 }
         }
+        @media only screen and (max-width: 550px){
+                span{
+                        display: none;
+                }
+        }
 }
 header{
         @extend .col-md-12;
@@ -2273,4 +2278,4 @@ footer{
 }
 .load{
         display: none;
-}     
+}

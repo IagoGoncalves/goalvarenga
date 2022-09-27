@@ -25,7 +25,7 @@ get_header();
 												<h2 data-swiper-parallax="2300"><?php the_title(); ?></h2>
 												<h3 data-swiper-parallax="-1800"><?php the_content(); ?></h3>	
 												<div data-swiper-parallax="-1000">
-													<a href="#" class="botao-padrao">Saiba mais</a>
+													<a href="<?php echo get_post_meta( $post->ID,'url-banner', true );?>" target="_blank" class="botao-padrao">Saiba mais</a>
 												</div>
 											</div>	
 											<div class="foto-banner" data-swiper-parallax="0">
@@ -106,7 +106,7 @@ get_header();
 							<p><?php echo $textoProjetos?></p>
 						</span>
 					</div>
-					<a href="#" class="botao-padrao">Saiba mais</a>
+					<a href="<?php echo esc_url( home_url( 'empresa' ) ); ?>" class="botao-padrao">Saiba mais</a>
 				</article>
 			</section>
 		</section>
@@ -126,7 +126,7 @@ get_header();
 										<div class="agrupador alinhamento">
 											<h3><?php the_title()?></h3>
 											<?php the_content()?>
-											<a href="#" class="botao-secundario">Saiba mais</a>
+											<a href="<?php the_permalink()?>" class="botao-secundario">Saiba mais</a>
 										</div>
 										<?php echo odin_thumbnail(640, 400, get_the_title(), true,true);?>	
 									</div>							
@@ -154,7 +154,7 @@ get_header();
 										<div class="swiper-slide">
 											<div class="box-projetos">
 												<?php echo odin_thumbnail(470, 322, get_the_title(), true, true);?>
-												<a class="botao-projetos" href="#"><?php the_title()?></a>
+												<a class="botao-projetos" href="<?php the_permalink()?>"><?php the_title()?></a>
 											</div>
 										</div>
 									<?php
@@ -181,7 +181,7 @@ get_header();
 		<section class="obra">
 			<h2>Sua obra em boas mãos!</h2>
 			<article class="infos alinhamento">
-				<a href="#" class="botao-padrao">Faça um orçamento</a>
+				<a href="<?php echo esc_url( home_url( 'contato' ) ); ?>" class="botao-padrao">Faça um orçamento</a>
 				<div class="contato alinhamento">
 					<?php
 						$args = array('post_type' => 'dados','posts_per_page' => 1);
@@ -204,7 +204,7 @@ get_header();
 											$facebook =  get_post_meta( $post->ID,'facebook', true );
 											$instagram =  get_post_meta( $post->ID,'instagram', true );
 										?>
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-redondo"/>
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-redondo.png"/>
 										<span>
 											<p>Fale com nosso<br>setor de vendas:</p>
 											<div class="icones">
