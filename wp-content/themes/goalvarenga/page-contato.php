@@ -47,7 +47,7 @@ get_header();
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/loc-yellow.svg"/>
 										<span>
 											<h3>Localização:</h3>
-											<p><?php echo $logradouro ?> <?php echo $endereco ?> - <br> <?php echo $cidade ?>, <?php echo $estado ?>, <?php echo $cep ?></p>
+											<p><?php echo $logradouro ?> <?php echo $endereco ?> - <br> <?php echo $cidade ?>, <?php echo $estado ?>, CEP: <?php echo $cep ?></p>
 										</span>
 									</a>
 									<div class="horario alinhamento">

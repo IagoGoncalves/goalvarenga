@@ -6,53 +6,53 @@ add_action( 'wp_ajax_nopriv_enviar-email', 'my_action_enviar_email' );
 function my_action_enviar_email() {
 
 	if (($_POST['tipo-email']) == "contato"){
-		$deNome = $_POST['nome'];
-		$sobrenome = $_POST['sobrenome'];
+		$deNome = $_POST['name'];
+		$deAssunto = $_POST['assunto'];
 		$deEmail = $_POST['email'];
-		$telefone = $_POST['telefone'];
-		$mensagem = $_POST['mensagem'];
-		$promocao = $_POST['promocao'];
-		$assunto = $_POST['assunto'];
-
-		$arquivo = "Nome: " . $deNome . "\n" . "Sobrenome: " . $sobrenome . "\n" . "Email: " . $deEmail . "\n" . "Telefone: " . $telefone . "\n" . "Quero receber notícias e promoções: " . $promocao . "\n" . $mensagem;	
-		/*$receber = "hotelamoreiras@hotelamoreiras.com.br";*/
-		$receber = "raphael@comunicandoideias.com.br";
-
-	}else if (($_POST['tipo-email']) == "emailHome") {
-		$deNome = $_POST['nome'];
-		$sobreNome = $_POST['sobreNome'];
-		$email = $_POST['email'];
-		$arquivo = "Nome: " . $deNome . "\n" . "Sobrenome: " . $sobreNome . "\n" . "Email: " . $deEmail;
-
-		$assunto = "Fique Por dentro de nossas promoções";
-		/*$receber = "hotelamoreiras@hotelamoreiras.com.br";*/
-		$receber = "raphael@comunicandoideias.com.br";
-
-	}else if (($_POST['tipo-email']) == "emaillazer") {
-		$deNome = $_POST['nome'];		
-		$email = $_POST['email'];
-		$assunto = $_POST['assunto'];
-		$mensagem = $_POST['mensagem'];
-
-		$arquivo = "Nome: " . $deNome . "\n" . "Email: " . $deEmail . "\n" . "Assunto: " . $assunto . "\n" . $mensagem;
-		
-		/*$receber = "hotelamoreiras@hotelamoreiras.com.br";*/
-		$receber = "raphael@comunicandoideias.com.br";
+		$deTelefone  = $_POST['telefone'];
+		$demensagem  = $_POST['message'];
+	    
+	    $mensagem = 
+			"Contato Becomi \n\n". 
+			"Nome: " . $deNome . "\n".
+			"Assunto: " . $deAssunto ."\n".
+			"Email: " . $deEmail ."\n".
+			"Telefone: " . $deTelefone ."\n".
+			"Mensagem: " . $demensagem ."\n\n".
+			"Mensagem Enviada pelo site da GO Alvarenga";
 	}
-		// e-mail para receber os dados do formulario
-		// insira uma conta de e-mail valida em sua hospedagem		
-		$destino = $receber;
-		// O remetente deve ser um e-mail do seu domínio conforme determina a RFC 822.
-		$remetente = $destino;
-		$mensagem = $_POST['mensagem'];
-		$subject = $assunto;
-		$origem = $_POST['from'];
-		$headers = "MIME-Version: 1.1\n";
-		$headers .= "Content-type: text/plain; charset=iso-8859-1\n";
-		$headers .= "From: " . $remetente . "\n";
-		$headers .= "Reply-To: " . $origem . "\n";
-		if(mail($destino, $subject, $arquivo, $headers))
-			echo "Mensagem enviada com sucesso";
-		else
-			echo "A mensagem não pode ser enviada, tente novamente ou tente mais tarde";		
+
+		//require_once('class.phpmailer.php');
+
+		$mailer = new PHPMailer();
+		$mailer->IsSMTP();
+		$mailer->SMTPDebug = 1;
+		$mailer->Port = 587;
+		$mailer->Host = 'localhost';
+
+		//$mailer->SMTPAuth = true; //Define se haverá ou não autenticação no SMTP
+		//$mailer->Username = ''; //Informe o e-mail o completo
+		//$mailer->Password = ''; //Senha da caixa postal
+
+		// DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
+		date_default_timezone_set('America/Sao_Paulo');
+
+		$mailer->FromName = 'Pagina de contato'; //Nome que será exibido para o destinatário
+		$mailer->From = $deEmail; //Obrigatório ser a mesma caixa postal indicada em "username"
+		$mailer->AddReplyTo($deEmail, $deNome);
+		$mailer->AddAddress('iago@ideapublicidade.com.br'); //Destinatários
+
+		//Conversor UTF-8 para acentuação
+		$mailer->Subject = $assunto = '=?UTF-8?B?'.base64_encode($assunto).'?=';		
+		$mailer->Subject = "E-mail do Site Go Alvarenga" ." - ".date("H:i").'-'.date("d/m/Y");
+		$mailer->Body = $mensagem;
+		$mailer->CharSet = "UTF-8";
+		if($mailer->Send()) { ?>
+			<h3 class='enviado'>Mensagem enviada com sucesso </h3>	
+		<?php }
+
+		else { ?>
+			<h3 class='erro'>A mensagem não pode ser enviada, tente novamente ou tente mais tarde!</h3>
+		<?php }
+		die();
 }
