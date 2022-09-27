@@ -112,7 +112,7 @@
         </article>
         <article class="copyright">
             <div class="container">
-				<p class="alinhamento">Copyright 2022© Todos os direitos reservados.</p>
+				<p>Copyright 2022© Todos os direitos reservados.</p>
 				<a href="https://ideapublicidade.com.br/" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/idea.png"/></a>
 			</div>
         </article> 

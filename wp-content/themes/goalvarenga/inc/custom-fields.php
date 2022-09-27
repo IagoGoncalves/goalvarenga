@@ -319,6 +319,13 @@ function custom_metabox() {
   $post_metabox->set_fields(
     array(
       array(
+        'id'          => 'data-imagem', // Obrigatório
+        'label'       => __( 'Desde de...', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '1990', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
         'id'          => 'experiencia', // Obrigatório
         'label'       => __( 'Anos de experiência', 'odin' ), // Obrigatório
         'type'        => 'text', // Obrigatório

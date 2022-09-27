@@ -85,6 +85,7 @@ get_header();
 				?>
 			</article>
 			<article class="formulario">
+				<h2>Entre em contato</h2>
 				<form class="contact2-form" id="contato" name="enviar-email" method="post">
 					<input class="tipo-email" type="hidden" name="tipo-email" value="contato">
 					<div class="campos campo1">

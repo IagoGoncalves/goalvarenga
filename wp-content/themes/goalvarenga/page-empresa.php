@@ -34,11 +34,6 @@ get_header();
 								<a href="javascript:void(0)" id="btnvisao" onclick="alternadorVisao()">Visão</a>	
 								<a href="javascript:void(0)" id="btnvalores" onclick="alternadorValores()">Valores</a>	
 							</ul>
-							<!-- <div class="alternado2">
-								<a href="javascript:void(0)" id="btnmissao" onclick="alternadorMissao()">Missão</a>
-								<a href="javascript:void(0)" id="btnvisao" onclick="alternadorVisao()">Visão</a>
-								<a href="javascript:void(0)" id="btnvalores" onclick="alternadorValores()">Valores</a>
-							</div> -->
 						</div>
 						<span class="missao" id='missao'>Planejar e executar edificações com qualidade, rapidez, eficiência, beleza e segurança, que valorizem o bem-estar e o investimento dos clientes. </span>
 						<span class="visao" id='visao'>Ser uma empresa reconhecida pela exelência na área da construção  em obras e serviços, garantindo a integridade dos colaboradores e superando as expectativas de nossos clientes.</span>
@@ -47,6 +42,7 @@ get_header();
 				</article>
 				<article class="imagem">
 					<?php echo odin_thumbnail(767, 589, true, true);?>
+					<span class="alinhamento"><?php echo get_post_meta( $post->ID,'data-imagem', true );?><br><b>Desde</b></span>
 				</article>
 			</section>
 			<section class="informativo">
