@@ -41,6 +41,7 @@ function my_action_enviar_email() {
 		$mailer->From = $deEmail; //Obrigatório ser a mesma caixa postal indicada em "username"
 		$mailer->AddReplyTo($deEmail, $deNome);
 		$mailer->AddAddress('iago@ideapublicidade.com.br'); //Destinatários
+		// $mailer->AddAddress('contato@goalvarenga.com.br'); //Destinatários
 
 		//Conversor UTF-8 para acentuação
 		$mailer->Subject = $assunto = '=?UTF-8?B?'.base64_encode($assunto).'?=';		
