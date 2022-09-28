@@ -29,7 +29,7 @@ get_header();
 												</div>
 											</div>	
 											<div class="foto-banner" data-swiper-parallax="0">
-												<?php echo odin_thumbnail(1144, 905, get_the_title(), true, true);?>
+												<?php echo odin_thumbnail(1500, 2000, get_the_title(), true, true);?>
 											</div>		
 										</div>	
 									<?php
