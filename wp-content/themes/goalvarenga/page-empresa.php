@@ -42,7 +42,7 @@ get_header();
 				</article>
 				<article class="imagem">
 					<?php echo odin_thumbnail(767, 589, true, true);?>
-					<span class="alinhamento"><?php echo get_post_meta( $post->ID,'data-imagem', true );?><br><b>Desde</b></span>
+					<span class="alinhamento"><b>Desde</b><?php echo get_post_meta( $post->ID,'data-imagem', true );?></span>
 				</article>
 			</section>
 			<section class="informativo">

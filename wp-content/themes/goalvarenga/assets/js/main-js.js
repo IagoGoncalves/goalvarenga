@@ -75,6 +75,7 @@ jQuery(document).ready(function($) {
         var swiper = new Swiper('.single-projeto-swip', {
             speed: 2000,
             loop: true,
+            effect: 'fade',
             spaceBetween: 30,
             navigation: {
                 nextEl: '.swiper-button-next4',

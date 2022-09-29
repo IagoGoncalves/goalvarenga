@@ -507,13 +507,6 @@ function custom_metabox() {
   $post_metabox->set_fields(
     array(
       array(
-        'id'          => 'cliente', // Obrigatório
-        'label'       => __( 'Cliente', 'odin' ), // Obrigatório
-        'type'        => 'text', // Obrigatório
-        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
-        'description' => __( '', 'odin' ), // Optional
-      ),
-      array(
         'id'          => 'data', // Required
         'label'       => __( 'Data conclusão', 'odin' ), // Required
         'type'        => 'input', // Required

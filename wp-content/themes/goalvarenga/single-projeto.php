@@ -52,7 +52,6 @@ get_header();?>
 			</aside>
 			<aside class="descritivo alinhamento">
 				<?php
-					$cliente =  get_post_meta( $post->ID,'cliente', true );
 					$data =  get_post_meta( $post->ID,'data', true );
 					$localizacao =  get_post_meta( $post->ID,'localizacao', true );
 				?>
@@ -60,12 +59,6 @@ get_header();?>
 					<div class="linha">
 						<h3>Categoria</h3>
 						<p><?php echo wp_get_post_terms( $post->ID, 'categoria-projetos')[0]->name;?></p>
-					</div>
-				</div>
-				<div class="box box2">
-					<div class="linha">
-						<h3>Cliente</h3>
-						<p><?php echo $cliente?></p>
 					</div>
 				</div>
 				<div class="box box3">

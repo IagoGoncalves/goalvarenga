@@ -1077,7 +1077,7 @@ footer{
                         }               
                         .swiper-button{
                                 top: unset;
-                                bottom: 50%;
+                                bottom: 55%;
                                 transform: translateY(50%);
                                 width: 50px;
                                 height: 60px;
@@ -1090,7 +1090,6 @@ footer{
                                 background: transparent;                        
                         }
                         .prev, .next{
-                                bottom: 45%;
                                 width: auto;                       
                                 height: auto;
                                 svg{
@@ -1931,7 +1930,7 @@ footer{
                         .box{
                                 padding: 30px 0px;
                                 background-color: #f5f5f5;
-                                &:nth-child(4){
+                                &:nth-child(3){
                                         .linha{
                                                 border: none;
                                         }
