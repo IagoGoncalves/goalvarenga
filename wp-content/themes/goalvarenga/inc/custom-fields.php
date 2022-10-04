@@ -336,6 +336,21 @@ function custom_metabox() {
         'description' => __( '', 'odin' ), // Optional
       ), 
       array(
+        'id'          => 'missao', // Obrigatório
+        'label'       => __( 'Missão', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ), 
+      array(
+        'id'          => 'visao', // Obrigatório
+        'label'       => __( 'Visão', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ), 
+      array(
+        'id'          => 'valores', // Obrigatório
+        'label'       => __( 'Valores', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ), 
+      array(
         'id'          => 'experiencia', // Obrigatório
         'label'       => __( 'Anos de experiência', 'odin' ), // Obrigatório
         'type'        => 'text', // Obrigatório

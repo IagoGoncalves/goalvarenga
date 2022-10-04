@@ -26,7 +26,7 @@ get_header();
 			<section class="sobre">
 				<article class="infos">
 					<h3>Sobre a empresa</h3>
-					<?php the_content()?>
+					<div class="texto"><?php the_content()?></div>
 					<div class="colapsagem">
 						<div class="titulos">
 							<ul class="alternado1">
@@ -35,9 +35,9 @@ get_header();
 								<a href="javascript:void(0)" id="btnvalores" onclick="alternadorValores()">Valores</a>	
 							</ul>
 						</div>
-						<span class="missao" id='missao'>Planejar e executar edificações com qualidade, rapidez, eficiência, beleza e segurança, que valorizem o bem-estar e o investimento dos clientes. </span>
-						<span class="visao" id='visao'>Ser uma empresa reconhecida pela exelência na área da construção  em obras e serviços, garantindo a integridade dos colaboradores e superando as expectativas de nossos clientes.</span>
-						<span class="valores" id='valores'>Ética, Qualidade, Compromisso, Respeito e Transparência.</span>
+						<span class="missao" id='missao'><?php echo get_post_meta( $post->ID,'missao', true );?></span>
+						<span class="visao" id='visao'><?php echo get_post_meta( $post->ID,'visao', true );?></span>
+						<span class="valores" id='valores'><?php echo get_post_meta( $post->ID,'valores', true );?></span>
 					</div>
 				</article>
 				<article class="imagem">

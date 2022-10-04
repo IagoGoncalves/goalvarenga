@@ -856,7 +856,7 @@ footer{
                                         span{
                                                 margin-left: 30px;
                                                 h3{
-                                                        font-size: 30px;
+                                                        font-size: 26px;
                                                         font-weight: 700;
                                                         color: $preto;
                                                         margin-bottom: 5px;
@@ -1254,9 +1254,11 @@ footer{
                                         font-weight: 700;
                                         margin: 0 0 20px 0;
                                 }
-                                p{
+                                .texto{
                                         margin-bottom: 50px;
-                                        font-weight: 300;
+                                        p{
+                                                font-weight: 300;
+                                        }
                                 }
                                 .colapsagem{
                                         .titulos{
@@ -1455,11 +1457,10 @@ footer{
                                 div{
                                         @extend .col-md-3;
                                         width: 22%;
-                                        padding: 0;
                                         flex-direction: column;
-                                        padding: 30px;
+                                        padding: 20px;
                                         width: 315px;
-                                        height: 262px;
+                                        height: 280px;
                                         border: 2px solid $amarelo;
                                         h4{
                                                 margin: 30px 0 10px 0;
@@ -1506,9 +1507,11 @@ footer{
                                                 font-size: 22px;
                                                 margin: 0 0 10px 0;
                                         }
-                                        p{
-                                                font-size: 14px;
+                                        .texto{
                                                 margin-bottom: 40px;
+                                                p{
+                                                        font-size: 14px;
+                                                }
                                         }
                                         .colapsagem{
                                                 .titulos{
