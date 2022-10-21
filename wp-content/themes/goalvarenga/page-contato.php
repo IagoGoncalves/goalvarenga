@@ -47,7 +47,7 @@ get_header();
 										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/loc-yellow.svg"/>
 										<span>
 											<h3>Localização:</h3>
-											<p><?php echo $logradouro ?> <?php echo $endereco ?> - <br> <?php echo $cidade ?>, <?php echo $estado ?>, <?php echo $cep ?></p>
+											<p><?php echo $logradouro ?> <?php echo $endereco ?> - <br> <?php echo $cidade ?>, <?php echo $estado ?>, CEP: <?php echo $cep ?></p>
 										</span>
 									</a>
 									<div class="horario alinhamento">
@@ -85,6 +85,7 @@ get_header();
 				?>
 			</article>
 			<article class="formulario">
+				<h2>Entre em contato</h2>
 				<form class="contact2-form" id="contato" name="enviar-email" method="post">
 					<input class="tipo-email" type="hidden" name="tipo-email" value="contato">
 					<div class="campos campo1">
@@ -113,7 +114,7 @@ get_header();
 					
 					<!-- Recaptcha -->
 					<div class="g-recaptcha_align campo4">
-						<div class="g-recaptcha" data-sitekey="6LdtdSohAAAAAMB3L0zW-l7Jx6eU9uCypi_-cn-H"></div>
+						<div class="g-recaptcha" data-sitekey="6LeJBDciAAAAAPMNkinWGFTve_6JKr1lpC7WsT0l"></div>
 					</div>	
 					<script>
 						window.onload = function() {

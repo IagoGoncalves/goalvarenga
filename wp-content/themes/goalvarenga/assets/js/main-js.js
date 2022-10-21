@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
                     spaceBetween: 10,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 20,
                 },
                 640: {
@@ -75,6 +75,7 @@ jQuery(document).ready(function($) {
         var swiper = new Swiper('.single-projeto-swip', {
             speed: 2000,
             loop: true,
+            effect: 'fade',
             spaceBetween: 30,
             navigation: {
                 nextEl: '.swiper-button-next4',
@@ -84,6 +85,18 @@ jQuery(document).ready(function($) {
                 delay: 4000,
             },    
         });
+
+    // Efeito de animação formulário
+        $('.input2').each(function(){
+            $(this).on('blur', function(){
+                if($(this).val().trim() != "") {
+                    $(this).addClass('has-val');
+                }
+                else {
+                    $(this).removeClass('has-val');
+                }
+            })    
+        })
 });
 
 function alternadorMissao(){

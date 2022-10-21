@@ -26,22 +26,23 @@ get_header();
 			<section class="sobre">
 				<article class="infos">
 					<h3>Sobre a empresa</h3>
-					<?php the_content()?>
+					<div class="texto"><?php the_content()?></div>
 					<div class="colapsagem">
 						<div class="titulos">
-							<ul>
-								<li><a href="javascript:void(0)" id="btnmissao" onclick="alternadorMissao()">Missão</a></li>
-								<li><a href="javascript:void(0)" id="btnvisao" onclick="alternadorVisao()">Visão</a></li>
-								<li><a href="javascript:void(0)" id="btnvalores" onclick="alternadorValores()">Valores</a></li>
+							<ul class="alternado1">
+								<a href="javascript:void(0)" id="btnmissao" onclick="alternadorMissao()">Missão</a>	
+								<a href="javascript:void(0)" id="btnvisao" onclick="alternadorVisao()">Visão</a>	
+								<a href="javascript:void(0)" id="btnvalores" onclick="alternadorValores()">Valores</a>	
 							</ul>
 						</div>
-						<span class="missao" id='missao'>Planejar e executar edificações com qualidade, rapidez, eficiência, beleza e segurança, que valorizem o bem-estar e o investimento dos clientes. </span>
-						<span class="visao" id='visao'>Ser uma empresa reconhecida pela exelência na área da construção  em obras e serviços, garantindo a integridade dos colaboradores e superando as expectativas de nossos clientes.</span>
-						<span class="valores" id='valores'>Ética, Qualidade, Compromisso, Respeito e Transparência.</span>
+						<span class="missao" id='missao'><?php echo get_post_meta( $post->ID,'missao', true );?></span>
+						<span class="visao" id='visao'><?php echo get_post_meta( $post->ID,'visao', true );?></span>
+						<span class="valores" id='valores'><?php echo get_post_meta( $post->ID,'valores', true );?></span>
 					</div>
 				</article>
 				<article class="imagem">
 					<?php echo odin_thumbnail(767, 589, true, true);?>
+					<span class="alinhamento"><b>Desde</b><?php echo get_post_meta( $post->ID,'data-imagem', true );?></span>
 				</article>
 			</section>
 			<section class="informativo">

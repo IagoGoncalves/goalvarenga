@@ -18,6 +18,8 @@
 		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<?php endif; ?>
 	<?php wp_head(); ?>
+
+	<script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -84,7 +86,7 @@
 							endif;
 						wp_reset_postdata(); 
 					?>
-					<a href="#" class="botao-whats alinhamento"></a>
+					<a href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site da GO Alvarenga" alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank" class="botao-whats alinhamento"></a>
 				</div>
 			</div>
 		</div>

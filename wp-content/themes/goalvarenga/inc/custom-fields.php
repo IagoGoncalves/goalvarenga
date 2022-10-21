@@ -221,6 +221,16 @@ function custom_metabox() {
           'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
           'description' => __( 'Descrition Example', 'odin' ), // Opcional
         ), 
+        array(
+          'id'          => 'url-banner', // Required
+          'label'       => __( 'Link', 'odin' ), // Required
+          'type'        => 'input', // Required
+          // 'default'  => 'Default text', // Optional
+          'description' => __( 'Ex: https://goalvarenga.com.br', 'odin' ), // Optional
+          'attributes'  => array( // Optional (html input elements)
+              'type' => 'url'
+          )
+        ),
       )
    );
 //Home
@@ -318,6 +328,28 @@ function custom_metabox() {
   );
   $post_metabox->set_fields(
     array(
+      array(
+        'id'          => 'data-imagem', // Obrigatório
+        'label'       => __( 'Desde de...', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+        'default'     => '1990', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+        'description' => __( '', 'odin' ), // Optional
+      ), 
+      array(
+        'id'          => 'missao', // Obrigatório
+        'label'       => __( 'Missão', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ), 
+      array(
+        'id'          => 'visao', // Obrigatório
+        'label'       => __( 'Visão', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ), 
+      array(
+        'id'          => 'valores', // Obrigatório
+        'label'       => __( 'Valores', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ), 
       array(
         'id'          => 'experiencia', // Obrigatório
         'label'       => __( 'Anos de experiência', 'odin' ), // Obrigatório
@@ -489,13 +521,6 @@ function custom_metabox() {
   );
   $post_metabox->set_fields(
     array(
-      array(
-        'id'          => 'cliente', // Obrigatório
-        'label'       => __( 'Cliente', 'odin' ), // Obrigatório
-        'type'        => 'text', // Obrigatório
-        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
-        'description' => __( '', 'odin' ), // Optional
-      ),
       array(
         'id'          => 'data', // Required
         'label'       => __( 'Data conclusão', 'odin' ), // Required
