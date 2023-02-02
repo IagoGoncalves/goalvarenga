@@ -114,7 +114,7 @@ get_header();
 					
 					<!-- Recaptcha -->
 					<div class="g-recaptcha_align campo4">
-						<div class="g-recaptcha" data-sitekey="6LeJBDciAAAAAPMNkinWGFTve_6JKr1lpC7WsT0l"></div>
+						<div class="g-recaptcha" data-sitekey="6LdPQcgUAAAAAM0o8iUcKuwhe7r6NmpG2lXSGl1Y"></div>
 					</div>	
 					<script>
 						window.onload = function() {

@@ -26,7 +26,7 @@
 	<header id="header" class="header" role="banner">
 		<div id="menu" class="menu">
 			<div id="main-navigation" class="main-navigation navbar navbar-default">					
-				<a class="logo-principal" href="<?php echo esc_url( home_url( 'home' ) ); ?>" alt="GO Alvarenga" title="GO Alvarenga"><img  src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png"/></a>
+				<a class="logo-principal" href="<?php echo esc_url( home_url( 'home' ) ); ?>" alt="GO Alvarenga" title="GO Alvarenga"><img  src="<?php echo get_template_directory_uri(); ?>/assets/images/logo1.png"/></a>
 				
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">

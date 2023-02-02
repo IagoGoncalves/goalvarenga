@@ -1,4 +1,12 @@
 jQuery(document).ready(function($) {
+    // Menu fixo 
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 200) {
+            $("#menu").addClass("menu-fixo");
+        } else {
+            $("#menu").removeClass("menu-fixo");
+        }  
+    });
     // Banner da pagina home
         var swiper = new Swiper('.banner-home', {
             speed: 2000,

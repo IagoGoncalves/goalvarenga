@@ -185,6 +185,7 @@ header{
         background-color: #FFFFFF;
         z-index: 999;
         top: 0;
+        transition: all .4s;
         background-color: $amarelo;
         //box-shadow: -16px 5px 34px -25px #000;
         .container:before, .container:after {
@@ -212,6 +213,7 @@ header{
                         img{
                                 max-width: 100%;
                                 transform: scale(1.00);
+                                transition: all .4s;
                                 width: 100%;
                                 @media only screen and (max-width: 990px){
                                         width: 150px; 
@@ -399,6 +401,17 @@ header{
                                         display: none;
                                 }
                         }
+                }
+        }
+        .menu-fixo{ 
+                z-index: 999;
+                .logo-principal{
+                        display: flex;
+                        justify-content: center;
+                        img{
+                                width: 75%;
+                                transition: all .4s;
+                        }                                
                 }
         }
         @media only screen and (max-width: 990px){
